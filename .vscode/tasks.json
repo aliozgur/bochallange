@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/bocloudchallange/project.json"
+                "${workspaceRoot}/project.json"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"
