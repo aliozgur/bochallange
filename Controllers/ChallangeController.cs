@@ -16,8 +16,8 @@ namespace bocloudchallange.Controllers
                     LastName = "Özgür",
                     Email = "aliozgur79@gmail.com",
                     Twitter = "@aliozgur",
-                    GitHub = "aliozgur",
-                    Gravatar = "http://en.gravatar.com/pragmadev"
+                    Github = "aliozgur",
+                    //Gravatar = "http://en.gravatar.com/pragmadev"
             };
 
             return new JsonResult(personalInfo);
@@ -38,13 +38,14 @@ namespace bocloudchallange.Controllers
                         ".NET, C#, F#, R, Cloud and Git",
                         "Xamarin"
                     },
-                    Blog = "http://aliozgur.net",
+                    /*Blog = "http://aliozgur.net",
                     Projects = new Dictionary<string,string>(){
                         ["PragmaSql"] = "Open source T-SQL editor",
                         ["Xamarin"] = "Couple of open source plugins for Xamarin Forms",
                         ["Serilog.HttpContextData"] = "Enrich your log messages with HttpContext data",
                         ["SeqApps"] = "Seq apps for Jira, Rocket.Chat, GitLab and GitHub",
                     }
+                    */
             };
 
             return new JsonResult(myProfile);
