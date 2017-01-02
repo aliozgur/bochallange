@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Cors;
 
 namespace bocloudchallange
 {
@@ -32,6 +33,8 @@ namespace bocloudchallange
             services
                 .AddMvc()
                 .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+            services.AddCors();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +44,8 @@ namespace bocloudchallange
             loggerFactory.AddDebug();
 
             app.UseMvc();
+            app.UseCors(builder => builder.WithOrigins("http://developercloudchallenge.azurewebsites.net"));
+
         }
     }
 }
