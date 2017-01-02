@@ -56,7 +56,11 @@ namespace bocloudchallange.Controllers
         {
            
             var url = UriHelper.GetDisplayUrl(this.Request);
-            var notFoundMsg = new { Message = $"No HTTP resource was found that matches the request URI '{url}'."};
+            var notFoundMsg = new 
+            { 
+                Message = $"No HTTP resource was found that matches the request URI '{url}'.",
+                ProjectRepository = "https://github.com/aliozgur/bochallange"
+            };
             return NotFound( notFoundMsg );
 
         }
