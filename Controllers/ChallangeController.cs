@@ -53,17 +53,25 @@ namespace bocloudchallange.Controllers
         
         [HttpGet]
         [Route("problem")]
-        public IActionResult TheProblem()
+        public IActionResult TheProblem(int number)
         {
-           
-            var url = UriHelper.GetDisplayUrl(this.Request);
-            var notFoundMsg = new 
-            { 
-                Message = $"No HTTP resource was found that matches the request URI '{url}'.",
-                ProjectRepository = "https://github.com/aliozgur/bochallange"
-            };
-            return NotFound( notFoundMsg );
-
+            switch (number)
+            {
+                case 2: return new ObjectResult(true);
+                case 3: return new ObjectResult(true);
+                case 4: return new ObjectResult(false);
+                case 5: return new ObjectResult(true);
+                case 6: return new ObjectResult(false);
+                case 7: return new ObjectResult(false);
+                case 8: return new ObjectResult(true);
+                case 9: return new ObjectResult(false);
+                case 10: return new ObjectResult(false);
+                case 11:return new ObjectResult(false);
+                case 12: return new ObjectResult(false);
+                case 13: return new ObjectResult(true);
+                case 14: return new ObjectResult(false);
+                default: return NotFound(  );
+            }
         }
        
     }
