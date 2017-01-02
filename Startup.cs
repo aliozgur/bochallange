@@ -44,7 +44,9 @@ namespace bocloudchallange
             loggerFactory.AddDebug();
 
             app.UseMvc();
-            app.UseCors(builder => builder.WithOrigins("http://developercloudchallenge.azurewebsites.net"));
+            app.UseCors(builder => builder.WithOrigins("http://developercloudchallenge.azurewebsites.net")
+                .AllowAnyHeader()
+                .AllowAnyMethod());
 
         }
     }
